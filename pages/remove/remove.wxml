@@ -1,0 +1,26 @@
+<view style="width: 750rpx;height: 210rpx;background-image: url('../../images/math/bg.jpg');background-size: cover;text-align: center;line-height: 155rpx;font-size: 70rpx;">
+  <text style="font-family:'UoqMunThenKhung';letter-spacing: 9rpx;color: white;text-shadow:2px 2px #777;">小学生算法</text>
+</view>
+
+
+
+<view style="width: 750rpx;height:1500rpx;background-color:rgba(218, 190, 255, 0.582);">
+
+<view style="margin-top: 20rpx;">
+  <block wx:for="{{mathdata}}">
+    <view style="display: flex;justify-content: center;margin-top: 42rpx;">
+      <text decode="true" style="font-family: 'ShanziGuaziTi';font-weight: bold;"><text style="color: rebeccapurple;">{{index+1}}.</text> &nbsp;{{item.a}} &nbsp;&nbsp;➖ &nbsp;&nbsp;{{item.b}} = &nbsp;&nbsp;</text>
+      <input style="width: 180rpx;background-color: rgba(202, 137, 255, 0.705);height: 50rpx;text-align: center;" id="{{index}}" bindinput="bindKeyInput" value="{{inputValue}}"></input>
+
+      <view style="background-image: url('{{img[index]}}');background-size: cover;background-position: center;width: 50rpx;height: 50rpx;"></view>
+    <span wx:if="{{showAnswer}}">{{item.result}}</span>
+    </view>
+  </block>
+</view>
+
+<view style="display: flex;margin-top: 30rpx;">
+  <button style="color:rgb(122, 47, 212);border: 1rpx solid rgb(79, 19, 156);width: 40%;font-family: 'Alibaba Health Font 2.0 CN 45 R';letter-spacing: 7rpx;" bind:tap="btnok">确认提交</button>
+  <button style="color:rgb(122, 47, 212);border: 1rpx solid rgb(79, 19, 156);width: 40%;font-family: 'Alibaba Health Font 2.0 CN 45 R';font-weight: bold;letter-spacing: 7rpx;" bind:tap="refreshPage">再来一次</button>
+</view>
+
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/remove/remove",
+    "pages/multiple/multiple",
+    "pages/divide/divide"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#845EC2",  
+    "navigationBarTextStyle": "white",  
+    "navigationBarTitleText": "小学生算法"
+  },
+  "style": "v2",
+  
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#845EC2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "加法",
+        "iconPath": "images/math/p1.png",
+        "selectedIconPath": "images/math/p1select.png"
+      },
+      {
+        "pagePath": "pages/remove/remove",
+        "text": "减法",
+        "iconPath": "images/math/p2.png",
+        "selectedIconPath": "images/math/p2select.png"
+      },
+
+      {
+        "pagePath": "pages/multiple/multiple",
+        "text": "乘法",
+        "iconPath": "images/math/p3.png",
+        "selectedIconPath": "images/math/p3select.png"
+      },
+      {
+        "pagePath": "pages/divide/divide",
+        "text": "除法",
+        "iconPath": "images/math/p4.png",
+        "selectedIconPath": "images/math/p4select.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

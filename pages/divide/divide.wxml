@@ -1,0 +1,42 @@
+
+<view style="width: 750rpx;height: 210rpx;background-image: url('../../images/math/bg.jpg');background-size: cover;text-align: center;line-height: 155rpx;font-size: 70rpx;">
+  <text style="font-family:'UoqMunThenKhung';letter-spacing: 9rpx;color: white;text-shadow:2px 2px #777;">小学生算法
+  </text>
+</view>
+
+<view style="position: absolute; top: 160rpx;  display: flex; background-color: rgba(205, 129, 255, 0.521); width: 100%;justify-content: center; height: 40rpx;color: white;text-shadow:2px 2px #777; " >  
+  <text class="tip_animate" style=" letter-spacing: 1rpx;font-size: 35rpx;line-height: 15rpx;font-style: italic;">
+  温馨提示：整除也需要将余数补全
+  </text>
+</view>
+
+
+<view style="width: 750rpx;height:1500rpx;background-color:rgba(218, 190, 255, 0.582);">
+
+<view style="margin-top: 50rpx;width: 750rpx;height: auto;">
+  <block wx:for="{{mathdata}}">
+    <view style="display: flex;margin-top: 42rpx;">
+      <text decode="true" style="position: relative;margin-left: 100rpx;font-family: 'ShanziGuaziTi';font-weight: bold;">
+        <text style="width: 150rpx; position: absolute; left: -65rpx; top: 0rpx;text-align: center;color: rebeccapurple;">{{index+1}}. </text>
+        <text decode="true" style="position: relative;margin-left: 45rpx;">&nbsp;{{item.a}} &nbsp;&nbsp;➗ &nbsp;&nbsp;</text>
+        <text style="position: absolute;margin-left: 5rpx;width: 50rpx;text-align: center;">{{item.b}}</text>
+        <text decode="true" style="position: relative;margin-left: 55rpx;"> = &nbsp;&nbsp;</text>
+      </text>
+        <input style="width: 90rpx;background-color: rgba(202, 137, 255, 0.705);height: 50rpx;text-align: center;color: white;" id="{{index}}" bindinput="bindKeyInput" value="{{inputValue_a}}">
+        </input>
+          <span style="margin:0 5rpx;font-family: 'ShanziGuaziTi';font-size: 42rpx;">余</span>
+        <input style="width:60rpx;background-color: rgba(202, 137, 255, 0.705);height: 50rpx;text-align: center;color: white;" id="{{index}}" value="{{inputValue_b}}" bindinput="bindModInput">
+        </input>
+      <view style="background-image: url('{{img[index]}}');background-size: cover;background-position: center;width: 50rpx;height: 50rpx;"></view>
+      <span wx:if="{{showAnswer}}">{{item.result}}</span>
+    </view>
+  </block>
+</view>
+
+<view style="display: flex;margin-top: 20rpx;">
+  <button style="color:rgb(122, 47, 212);border: 1rpx solid rgb(79, 19, 156);width: 40%;font-family: 'Alibaba Health Font 2.0 CN 45 R';letter-spacing: 7rpx;" bind:tap="btnok">确认提交</button>
+  <button style="color:rgb(122, 47, 212);border: 1rpx solid rgb(79, 19, 156);width: 40%;font-family: 'Alibaba Health Font 2.0 CN 45 R';font-weight: bold;letter-spacing: 7rpx;" bind:tap="refreshPage">再来一次</button>
+</view>
+
+
+</view>
